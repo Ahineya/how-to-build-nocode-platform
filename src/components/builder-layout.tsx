@@ -1,4 +1,5 @@
 import React from "react";
+import {BuilderLayoutIframe} from "./builder-layout-iframe";
 
 type BaseNode = {
 	uuid: string;
@@ -28,7 +29,7 @@ const elements: BodyElement = {
   ]
 }
 
-export const DemoLayout = () => {
+export const BuilderLayout = () => {
 
   const getElement = (element: ElementNode) => {
     switch (element.type) {
@@ -43,5 +44,5 @@ export const DemoLayout = () => {
     }
   }
 
-  return <>{getElement(elements)}</>;
+  return <BuilderLayoutIframe>{getElement(elements)}</BuilderLayoutIframe>;
 }
